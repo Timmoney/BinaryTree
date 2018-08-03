@@ -40,6 +40,7 @@ BstNode* Find(BstNode* root, int data); //return address
 BstNode* GetSuccessor(BstNode* root, int data); //get the successor, and return that node
 
 int main(){
+	//creating the original tree
 	BstNode* root = NULL;
 	root = Insert(root, 12);
 	root = Insert(root, 5);
@@ -50,14 +51,39 @@ int main(){
 	root = Insert(root, 15);
 	root = Insert(root, 13);
 	root = Insert(root, 17);
+
+	/*testing for search method*/
+	if(Search(root, 17)){
+		printf("17 is found in the tree.\n");
+	}
+	if(!Search(root, 20)){
+		printf("20 is not found in the tree.\n" );
+	}
+
+	printf("\n");
+
+	/*testing for FindMin*/
+	printf("The min value in the tree is %d\n", FindMin(root));
+
+	/*testing for FindMax*/
+	printf("The max value in the tree is %d\n", FindMax(root));
+
+	printf("\n");
+
+	/*testing for FindHeight*/
+	printf("The height of the tree is %d\n", Findheight(root));
+
+
+
+
 	//LevelOrder(root); 
 	// delNode(root, 15);
 	// LevelOrder(root);
 
 	// BstNode* p = Find(root, 5);
 	// printf("%d\n", p->data);
-	BstNode* p = GetSuccessor(root, 5);
-	printf("%d\n", p->data);
+	//BstNode* p = GetSuccessor(root, 5);
+	//printf("%d\n", p->data);
 
 	//cout << FindMin(root) <<endl;
 	//cout << FindMax(root) <<endl;
@@ -82,7 +108,7 @@ bool Search(BstNode* root, int data){
 	if(root == NULL) return false;
 	if(root->data == data) return true;
 
-	else if(data<=root->data) return Search(root->left,data);
+	else if(data<root->data) return Search(root->left,data);
 	else return Search(root->right,data);
 }
 
@@ -223,6 +249,7 @@ int Findheight(BstNode* root){
 	int leftH;
 	int rightH;
 
+	//base case with the subtree is empty return -1 
 	if(root == NULL) 
 		return -1; //for balance out
 	leftH = Findheight(root->left);

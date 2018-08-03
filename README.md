@@ -27,4 +27,19 @@ Function details:
 
 9.postOrder(BstNode* root)
         left, right, root
+        
+10.isSubTLesser(BstNode* root, int value)
+        check if sub tree is lesser than the value
+        
+11.isSubTGreater(BstNode* root, int value)
+        check if sub tree is greater than the value
+        
+12.isBST(BstNode* root)
+        check if tree is a binary search tree
+    
+13.isBSTUtil(BstNode* root, int minValue, int maxValue)
+        compare min and max in the tree
+        
+14.isBST2(BstNode* root)
+        check if the tree is binary search tree using min and max
 

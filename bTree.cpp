@@ -94,33 +94,13 @@ int main(){
 	postOrder(root);
 	printf("\n\n");
 
+	if(isBST(root)){
+		printf("Passing isBST method, This is a binary search tree\n\n");
+	}
 
-
-
-	//LevelOrder(root); 
-	// delNode(root, 15);
-	// LevelOrder(root);
-
-	// BstNode* p = Find(root, 5);
-	// printf("%d\n", p->data);
-	//BstNode* p = GetSuccessor(root, 5);
-	//printf("%d\n", p->data);
-
-	//cout << FindMin(root) <<endl;
-	//cout << FindMax(root) <<endl;
-	//cout << Findheight(root) <<endl;
-
-	//preOrder(root);
-	//inOrder(root);
-	//postOrder(root);
-
-	//LevelOrder(root);
-
-	// int x;
-	// cout << "Enter your number be search\n";
-	// cin >> x;
-	// if(Search(root,x)==true) cout <<"Found\n";
-	// else cout<<"Not found\n";
+	if(isBST2(root)){
+		printf("Passing is BST2 method, This is a binary search tree\n");
+	}
 }
 
 

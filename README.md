@@ -13,5 +13,18 @@ Function details:
 4.FindMin/FindMax
         find the minimum and maximum value in the treeand
     
-5.FindHeight
+5.FindHeight(BstNode* root)
         return heigh of the tree
+
+6.LevelOrder(BstNode* root)
+        print out the tree in level order
+        
+7.preOrder(BstNode* root)
+        root, left, right
+
+8.inOrder(BstNode* root)
+        left, root, right
+
+9.postOrder(BstNode* root)
+        left, right, root
+

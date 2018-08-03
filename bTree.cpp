@@ -73,6 +73,27 @@ int main(){
 	/*testing for FindHeight*/
 	printf("The height of the tree is %d\n", Findheight(root));
 
+	printf("\n");
+
+	/*testing for level of order*/
+	LevelOrder(root);  
+
+	printf("\n\n");
+
+	/*testing for pre-oreder*/
+	preOrder(root);
+	printf("\n\n");
+
+
+	/*testing for pre-oreder*/
+	inOrder(root);
+	printf("\n\n");
+
+
+	/*testing for pre-oreder*/
+	postOrder(root);
+	printf("\n\n");
+
 
 
 
@@ -280,7 +301,7 @@ then preOrder(root->right) will keep going
 */
 void preOrder(BstNode* root){
 	if(root==NULL) return;
-	printf("%d\n", root->data);
+	printf("%d ", root->data);
 	preOrder(root->left);
 	preOrder(root->right);
 }
@@ -289,7 +310,7 @@ void preOrder(BstNode* root){
 void inOrder(BstNode* root){
 	if(root == NULL) return;
 	inOrder(root->left);
-	printf("%d\n", root->data);
+	printf("%d ", root->data);
 	inOrder(root->right);
 }
 
@@ -298,7 +319,7 @@ void postOrder(BstNode* root){
 	if(root == NULL) return;
 	postOrder(root->left);
 	postOrder(root->right);
-	printf("%d\n", root->data);
+	printf("%d ", root->data);
 
 }
 
